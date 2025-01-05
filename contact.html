@@ -1,0 +1,234 @@
+<html lang="en">
+<head>
+   
+    <title>Contact Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  <style>
+  
+	.contact-info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+
+	.contact-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	}
+    .contact-container {
+        display: flex;
+        padding: 20px;
+        background: #FFFAF0;  
+    }
+
+    .contact-info {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .contact-form {
+        flex: 1;
+        padding: 20px;
+        background: #191970;  
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        color: #FFF0F5;  
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    .form-group label span {
+        color: #B0E0E6;  
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background: #FFF0F5;  
+        font-size: 16px;
+        color: #4B0082;  
+    }
+
+    .form-group textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    .submit-btn {
+        background: #FFB6C1;  
+        color: #4B0082;  
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+        background: #DA70D6;  
+    }
+
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+        }
+        .contact-info, .contact-form {
+            width: 100%;
+        }
+    }
+	
+	/* Hide the audio player */
+        #background-music {
+            display: none;
+        }
+
+        /* Style for the sound icon button */
+        #music-control {
+            position: fixed; /* Fixes the button's position */
+            bottom: 20px; /* Distance from the bottom of the page */
+            left: 20px; /* Distance from the right of the page */
+            padding: 10px;
+            font-size: 20px; /* Increase icon size */
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #FA8072; /* Set icon color */
+            z-index: 1000; /* Ensures the button is on top of other elements */
+        }
+
+        #music-control:hover {
+            color: #574feb; /* Change color on hover */
+        }
+</style>
+</head>
+
+<body>
+	<!-- Background Music -->
+    <audio id="background-music" autoplay loop>
+        <source src="audio/bgm1.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <!-- Play/Pause Button with Sound Icon -->
+    <button id="music-control"><i class="fas fa-volume-up"></i></button>
+	
+    <table class="layout">
+        <!-- MENU -->
+        <tr class="menu-row">
+            <td colspan="2" class="menu">
+                <div class="menu-container">
+                    <div class="logo">
+                        <img src="images/logo1.webp" alt="Logo">
+                    </div>
+                    <div class="menu-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Me</a>
+                        <a href="education.html">Education</a>
+                        <a href="hobby.html">Hobby</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <!-- HEADER -->
+        <tr class="title-row">
+            <td colspan="2" class="title marquee-container">
+                &nbsp;
+                <span>&#10053;&#10021; Contact Me &#10021;&#10053;</span>
+                &nbsp;
+            </td>
+        </tr>
+		
+		 <tr>
+			<td colspan="2">
+				<div class="contact-wrapper">
+					<!-- Image area on the left -->
+					<div class="contact-image">
+						<img src="images/image8.png" alt="Contact Image">
+					</div>
+					
+					<!-- Contact form on the right -->
+					<div class="contact-box">
+						<form action="#" method="POST">
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" placeholder="Your name.." required>
+							</div>
+							<div class="form-group">
+								<label>Phone</label>
+								<input type="tel" placeholder="Your phone no.." required>
+							</div>
+							<div class="form-group">
+								<label>Subject</label>
+								<textarea placeholder="Write something.." required></textarea>
+							</div>
+							<button type="submit" class="submit-btn">Submit</button>
+							</form>
+					</div>
+				</div>
+			</td>
+		</tr>
+				
+        <!-- FOOTER -->
+        <tr class="footer-row">
+            <td colspan="2" class="footer">
+                <div class="know-me-section">
+				  <span class="know-me-text">Know Me More At</span>
+				  <div class="social-buttons">
+					<a href="https://www.facebook.com" class="social-button" target="_blank">
+					  <img src="images/fb.webp" alt="Facebook">
+					</a>
+					<a href="https://www.twitter.com" class="social-button" target="_blank">
+					  <img src="images/x3.png" alt="Twitter">
+					</a>
+					<a href="https://www.instagram.com" class="social-button" target="_blank">
+					  <img src="images/insta3.png" alt="Instagram">
+					</a>
+				 </div>
+			</div>
+            </td>
+        </tr>
+	
+	
+	 <script>
+        // JavaScript for Background Music Control
+        const audio = document.getElementById('background-music'); // Select the audio element
+        const button = document.getElementById('music-control');  // Select the button
+        const icon = button.querySelector('i');  // Select the icon element
+
+        // Play/Pause Logic
+        button.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play(); // Play music
+                icon.classList.remove('fa-volume-off'); // Remove mute icon
+                icon.classList.add('fa-volume-up'); // Add unmute icon
+            } else {
+                audio.pause(); // Pause music
+                icon.classList.remove('fa-volume-up'); // Remove unmute icon
+                icon.classList.add('fa-volume-off'); // Add mute icon
+            }
+        });
+    </script>
+	
+    </table>
+</body>
+</html>

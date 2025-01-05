@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+        /* Hide the audio player */
+        #background-music {
+            display: none;
+        }
+
+        /* Style for the sound icon button */
+        #music-control {
+            position: fixed; /* Fixes the button's position */
+            bottom: 20px; /* Distance from the bottom of the page */
+            left: 20px; /* Distance from the right of the page */
+            padding: 10px;
+            font-size: 20px; /* Increase icon size */
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #FA8072; /* Set icon color */
+            z-index: 1000; /* Ensures the button is on top of other elements */
+        }
+
+        #music-control:hover {
+            color: #574feb; /* Change color on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+	<!-- Background Music -->
+		<audio id="background-music" autoplay loop>
+			<source src="audio/bgm1.mp3" type="audio/mpeg">
+		</audio>
+
+    <!-- Play/Pause Button with Sound Icon -->
+    <button id="music-control"><i class="fas fa-volume-up"></i></button>
+	
+    <table class="layout">
+        <!-- MENU -->
+        <tr class="menu-row">
+            <td colspan="2" class="menu">
+                <div class="menu-container">
+                    <div class="logo">
+                        <img src="images/logo1.webp" alt="Logo">
+                    </div>
+                    <div class="menu-links">
+                        <a href="index.html">Home</a> <!-- Link to Home -->
+                        <a href="about.html">About Me</a> <!-- Link to About Me -->
+                        <a href="education.html">Education</a> <!-- Link to Education -->
+                        <a href="hobby.html">Hobby</a> <!-- Link to Hobby -->
+                        <a href="gallery.html">Gallery</a> <!-- Link to Gallery -->
+                        <a href="contact.html">Contact</a> <!-- Link to Contact -->
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+		  <!-- HEADER -->
+        <tr class="title-row">
+            <td colspan="3" class="title marquee-container">
+                &nbsp;
+                <span>&#10053;&#10021; About Me &#10021;&#10053;</span>
+                &nbsp;
+            </td>
+        </tr>
+		
+        <!-- CONTENT -->
+        <tr class="content-row">
+            <td class="image">
+                <img src="images/image32.jpg" alt="Profile Picture">
+            </td>
+            <td class="info">
+                <h3>1.History</h3>
+                <p><b>Ainul Wardiah Samsol</b></p>
+                <p>I was born on 25<sup>th</sup> October. I love my family, my cats and my best friends. I am a introvert so I mostly spend my time in my home and and spending time alone is actually very nice. People would describe as sharp and blunt person which I'm not going to deny it because painful reality is better than sweet lie. Another thing to add is I dislike taking picture of myself, I like taking picture of my family and scenery though.</p>
+            </td>
+        </tr>
+
+		<!-- CONTENT -->
+        <tr class="content-row">
+            <td class="image">
+                <img src="images/image30.jpg" alt="Profile Picture">
+            </td>
+            <td class="info">
+                <h3>2.Family</h3>
+                <p>This is my beloved family, it was small family but it enough for me. The beautiful lady on left is my beloved mama,Suhaida Jeas along with my older brother,Muhammad Khairul Anwar.I also have eldest sister but sadly i do not have the pic of all of us. I am the youngest child in the family. Lastly, my mother’s favorite child, our orange tabby pet named Ollet de Toilette or we just call him Meong.</p>
+            </td>
+        </tr>
+		
+		<!-- CONTENT -->
+        <tr class="content-row">
+            <td class="image">
+                <img src="images/image18.jpg" alt="Profile Picture">
+            </td>
+            <td class="info">
+                <h3>3.Friends</h3>
+                <p>My groupmates that has help me a lot through hardships in all semesters Aainii, Zahid, and Azhari. They have been supporting and guiding me to complete a lot of assignments. I am very grateful to get good classmates like them.</p>
+            </td>
+        </tr>
+		
+        <!-- FOOTER -->
+        <tr class="footer-row">
+            <td colspan="2" class="footer">
+                 <div class="know-me-section">
+				  <span class="know-me-text">Know Me More At</span>
+				  <div class="social-buttons">
+					<a href="https://www.facebook.com" class="social-button" target="_blank">
+					  <img src="images/fb.webp" alt="Facebook">
+					</a>
+					<a href="https://www.twitter.com" class="social-button" target="_blank">
+					  <img src="images/x3.png" alt="Twitter">
+					</a>
+					<a href="https://www.instagram.com" class="social-button" target="_blank">
+					  <img src="images/insta3.png" alt="Instagram">
+					</a>
+				 </div>
+			</div>
+            </td>
+        </tr>
+	
+	
+	 <script>
+        // JavaScript for Background Music Control
+        const audio = document.getElementById('background-music'); // Select the audio element
+        const button = document.getElementById('music-control');  // Select the button
+        const icon = button.querySelector('i');  // Select the icon element
+
+        // Play/Pause Logic
+        button.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play(); // Play music
+                icon.classList.remove('fa-volume-off'); // Remove mute icon
+                icon.classList.add('fa-volume-up'); // Add unmute icon
+            } else {
+                audio.pause(); // Pause music
+                icon.classList.remove('fa-volume-up'); // Remove unmute icon
+                icon.classList.add('fa-volume-off'); // Add mute icon
+            }
+        });
+    </script>
+	
+    </table>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<html lang="en">
+<head>
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-content {
+            padding: 20px;
+            background: #FFFAF0;
+        }
+
+        .gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 10px;  /* Changed from 20px to 10px */
+		padding: 20px;
+		}
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+		width: 100%;
+		height: 150px;  /* Changed from 200px to 150px */
+		object-fit: cover;
+		display: block;
+		}
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(102, 51, 153, 0.8);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+		.gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+		}
+
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+				
+				.video-section {
+			text-align: center;
+			margin: 20px 0;
+		}
+
+		.video-row {
+			display: flex; /* Flexbox to align items in a horizontal row */
+			justify-content: center; /* Center the row */
+			gap: 20px; /* Space between the videos */
+		}
+
+		video {
+			border-radius: 8px; /* Optional rounded corners */
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+			transition: transform 0.3s ease;
+		}
+
+		video:hover {
+			transform: scale(1.05); /* Slight zoom on hover */
+		}
+		/* Hide the audio player */
+        #background-music {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+	
+    <table class="layout">
+        <!-- MENU -->
+        <tr class="menu-row">
+            <td colspan="2" class="menu">
+                <div class="menu-container">
+                    <div class="logo">
+                        <img src="images/logo1.webp" alt="Logo">
+                    </div>
+                    <div class="menu-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Me</a>
+                        <a href="education.html">Education</a>
+                        <a href="hobby.html">Hobby</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <!-- HEADER -->
+        <tr class="title-row">
+            <td colspan="2" class="title marquee-container">
+                &nbsp;
+                <span>&#10053;&#10021; My Photo Gallery &#10021;&#10053;</span>
+                &nbsp;
+            </td>
+        </tr>
+
+        <!-- GALLERY CONTENT -->
+        <tr>
+            <td colspan="2" class="gallery-content">
+                <div class="gallery-grid">
+                    <!-- Repeat this structure 16 times for your images -->
+                    <div class="gallery-item">
+                        <img src="images/image14.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">It just my face</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/image20.jpg" alt="Gallery Image 2">
+                        <div class="gallery-caption">Bro Code</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image10.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Night Practice</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image13.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">My Housemates Dean Celeb</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image31.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">My Two Favourite Person</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image34.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">TTS Camp</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image39.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Tokyo Ghoul Manga</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image41.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Various Manga</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image37.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Novels and Comics</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image44.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Portrait Failed Attempt</div>
+                    </div><div class="gallery-item">
+                        <img src="images/image33.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">FGO</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image19.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">View After MUET</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image21.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Final Fantasy Cosplayer</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image12.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Glamping</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image22.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Christmas Tree(?)</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image24.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Pulau Redang 1</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image23.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Pulau Redang 2</div>
+                    </div>
+					<div class="gallery-item">
+                        <img src="images/image25.jpg" alt="Gallery Image 1">
+                        <div class="gallery-caption">Pulau Redang 3</div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+			
+					<!-- HEADER -->
+		<tr class="title-row">
+			<td colspan="2" class="title marquee-container">
+				<span>&#10053;&#10021; My Memories &#10021;&#10053;</span>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="text-align: center;">
+				<div class="video-section">
+					<video width="300" height="200" controls>
+						<source src="images/video1.mp4" type="video/mp4">
+					
+					</video>
+					<video width="300" height="200" controls>
+						<source src="images/video4.mp4" type="video/mp4">
+						
+					</video>
+					<video width="300" height="200" controls>
+						<source src="images/video2.mp4" type="video/mp4">
+						
+					</video>
+				</div>
+			</td>
+		</tr>
+
+
+
+		       <!-- HEADER -->
+        <tr class="title-row">
+            <td colspan="2" class="title marquee-container">
+                &nbsp;
+                <span>&#10053;&#10021; My Favourite Of All Time &#10021;&#10053;</span>
+                &nbsp;
+            </td>
+        </tr>
+		
+		<!-- YOUTUBE VIDEO SECTION (New Row) -->
+		<tr>
+			<td colspan="2">
+				<div class="video-section">
+					<h2>&#10053; Twisted Wonderland Game Opening &#10053;</h2>
+					<div class="video-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/0Vw10lIdmvc?si=PBm8HMCk8De6WvFN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+				</div>
+			</td>
+		</tr>
+		
+        <!-- FOOTER -->
+        <tr class="footer-row">
+            <td colspan="2" class="footer">
+                 <div class="know-me-section">
+				  <span class="know-me-text">Know Me More At</span>
+				  <div class="social-buttons">
+					<a href="https://www.facebook.com" class="social-button" target="_blank">
+					  <img src="images/fb.webp" alt="Facebook">
+					</a>
+					<a href="https://www.twitter.com" class="social-button" target="_blank">
+					  <img src="images/x3.png" alt="Twitter">
+					</a>
+					<a href="https://www.instagram.com" class="social-button" target="_blank">
+					  <img src="images/insta3.png" alt="Instagram">
+					</a>
+				 </div>
+			</div>
+            </td>
+        </tr>
+		
+    </table>
+</body>
+</html>

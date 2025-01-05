@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+    <title> My Education </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+        /* Hide the audio player */
+        #background-music {
+            display: none;
+        }
+
+        /* Style for the sound icon button */
+        #music-control {
+            position: fixed; 
+            bottom: 20px; 
+            left: 20px; 
+            padding: 10px;
+            font-size: 20px; 
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #FA8072; 
+            z-index: 1000; 
+        }
+
+        #music-control:hover {
+            color: #574feb; 
+        }
+    </style>
+</head>
+
+<body>
+
+	<!-- Background Music -->
+		<audio id="background-music" autoplay loop>
+			<source src="audio/bgm1.mp3" type="audio/mpeg">
+		</audio>
+
+		<!-- Play/Pause Button with Sound Icon -->
+		<button id="music-control"><i class="fas fa-volume-up"></i></button>
+		<table class="layout">
+			<!-- MENU -->
+			<tr class="menu-row">
+				<td colspan="2" class="menu">
+					<div class="menu-container">
+						<div class="logo">
+							<img src="images/logo1.webp" alt="Logo">
+						</div>
+						<div class="menu-links">
+							<a href="index.html">Home</a>
+							<a href="about.html">About Me</a>
+							<a href="education.html">Education</a>
+							<a href="hobby.html">Hobby</a>
+							<a href="gallery.html">Gallery</a>
+							<a href="contact.html">Contact</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+		  <!-- HEADER -->
+        <tr class="title-row">
+            <td colspan="3" class="title marquee-container">
+                &nbsp;
+                <span>&#10053;&#10021; My Education &#10021;&#10053;</span>
+                &nbsp;
+            </td>
+        </tr>
+		
+        <!-- CONTENT -->
+
+		<tr class="content-row">
+			<td class="image">
+				<img src="images/image51.jpg" alt="Profile Picture">
+			</td>
+			<td class="info">
+				<ol start="1" style="color: #8B008B;">
+					<li>Primary School</li>
+				</ol>
+				<ul class="education-list">
+					<li>I went to SK JALAN ENAM BANDAR BARU BANGI Selangor to complete my primary education</li>
+					<li>I finished my year 1 until 6 at the same school. I am very close with my teachers because they has been teaching my older siblings first. Most of my teachers has guide me very well for the whole time </li>
+					<li>I am very active during primary school era. I active in co-curiculum and several other sport</li>
+				</ul>
+			</td>
+		</tr>
+
+
+		<tr class="content-row">
+			<td class="image">
+				<img src="images/image52.jpg" alt="Profile Picture">
+			</td>
+			<td class="info">
+				<ol start="2" style="color: #8B008B;">
+					<li>High School</li>
+				</ol>
+				<ul class="education-list">
+					<li>I went to SMK BANDAR BARU BANGI Selangor to complete my secondary education</li>
+					<li>The same thing happen because my teachers already known me before I even entered the school. I have learn from same teachers that teaches my siblings. I was grateful because they treat me very well.</li>
+					<li>During my high school, I only pursue more passive co-curiculum such as art,board games and language. I read a lot so I have received NILAM certificate for every year.</li>
+				</ul>
+			</td>
+		</tr>
+
+		
+		<tr class="content-row">
+			<td class="image">
+				<img src="images/image46.jpg" alt="Profile Picture">
+			</td>
+			<td class="info">
+				<ol start="3" style="color: #8B008B;">
+					<li>Diploma in Information Management</li>
+				</ol>
+				<ul class="education-list">
+					<li>I am currently a diploma semester 5 student at Universiti Teknologi MARA (UiTM). I planning to continue my degree in the same course</li>
+					<li>I am currently learning other languages such as Japanese and Mandarin to broaden my knowledge while having fun!</li>
+					<li>I usually spend my time at UiTM Library PTAR to do assignments and relaxing.</li>
+				</ul>
+			</td>
+		</tr>
+
+
+		
+        <!-- FOOTER -->
+        <tr class="footer-row">
+            <td colspan="2" class="footer">
+                <div class="know-me-section">
+				  <span class="know-me-text">Know Me More At</span>
+				  <div class="social-buttons">
+					<a href="https://www.facebook.com" class="social-button" target="_blank">
+					  <img src="images/fb.webp" alt="Facebook">
+					</a>
+					<a href="https://www.twitter.com" class="social-button" target="_blank">
+					  <img src="images/x3.png" alt="Twitter">
+					</a>
+					<a href="https://www.instagram.com" class="social-button" target="_blank">
+					  <img src="images/insta3.png" alt="Instagram">
+					</a>
+				 </div>
+			</div>
+            </td>
+        </tr>
+	
+	
+	 <script>
+        // JavaScript for Background Music Control
+        const audio = document.getElementById('background-music'); // Select the audio element
+        const button = document.getElementById('music-control');  // Select the button
+        const icon = button.querySelector('i');  // Select the icon element
+
+        // Play/Pause Logic
+        button.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play(); // Play music
+                icon.classList.remove('fa-volume-off'); // Remove mute icon
+                icon.classList.add('fa-volume-up'); // Add unmute icon
+            } else {
+                audio.pause(); // Pause music
+                icon.classList.remove('fa-volume-up'); // Remove unmute icon
+                icon.classList.add('fa-volume-off'); // Add mute icon
+            }
+        });
+    </script>
+	
+    </table>
+</body>
+</html>

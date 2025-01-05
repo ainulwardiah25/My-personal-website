@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+    <title>My Hobby</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<style>
+        /* Hide the audio player */
+        #background-music {
+            display: none;
+        }
+
+        /* Style for the sound icon button */
+        #music-control {
+            position: fixed; 
+            bottom: 20px; 
+            left: 20px; 
+            padding: 10px;
+            font-size: 20px; 
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #FA8072; 
+            z-index: 1000; 
+        }
+
+        #music-control:hover {
+            color: #574feb; 
+        }
+		
+		a {
+			text-decoration: none; 
+			display: inline-block; 
+			padding: 10px 20px; 
+			font-size: 16px; 
+			color: white; 
+			background-color: #663399;
+			border-radius: 25px;
+			border: 2px solid transparent; 
+			transition: all 0.3s ease; 
+		}
+
+		/* Hover effect */
+		a:hover {
+			background-color: white; 
+			color: #574feb; 
+			border-color: #574feb;
+			transform: scale(1.05); 
+		}
+    </style>
+</head>
+
+<body>
+	<!-- Background Music -->
+		<audio id="background-music" autoplay loop>
+			<source src="audio/bgm1.mp3" type="audio/mpeg">
+		</audio>
+
+    <!-- Play/Pause Button with Sound Icon -->
+    <button id="music-control"><i class="fas fa-volume-up"></i></button>
+	
+    <table class="layout"  id="up">
+        <!-- MENU -->
+        <tr class="menu-row">
+            <td colspan="2" class="menu">
+                <div class="menu-container">
+                    <div class="logo">
+                        <img src="images/logo1.webp" alt="Logo">
+                    </div>
+                    <div class="menu-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Me</a>
+                        <a href="education.html">Education</a>
+                        <a href="hobby.html">Hobby</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+		
+		  <!-- HEADER -->
+        <tr class="title-row">
+            <td colspan="3" class="title marquee-container">
+                &nbsp;
+                <span>&#10053;&#10021; My Hobbies &#10021;&#10053;</span>
+                &nbsp;
+            </td>
+        </tr>
+
+        <!-- CONTENT -->
+				<tr class="content-row">
+			<td class="image">
+				<img src="images/image38.jpg" alt="Profile Picture">
+			</td>
+			<td class="info">
+				<table>
+					<tr>
+						<td><a href="#reading">Reading</a></td>
+						<td><a href="#gaming">Gaming</a></td>
+						<td><a href="#drawing">Drawing</a></td>
+						<td><a href="#merch">Collecting Merchandise</a></td>
+					</tr>
+				</table>
+				<div class="section-header">
+					<h3 id="reading">Reading</h3>
+					<img src="images/image27.gif" alt="Reading GIF" class="section-gif">
+				</div>
+				<ul class="education-list">
+					<li>Sounds cliche but reading is my passion ever since I was a toddler.</li>
+					<li>I have a huge collection of books, including novels, manga, encyclopedias, and other types. I read both physical books and e-books.</li>
+					<li>My favourite genre of literature is fantasy filled with mythologies,paleontologies and legends.</li>
+					<li>The complete collection I have is Tokyo Ghoul,Twisted Tales and Magis Manis Coklat</li>
+					<a href="#up">Go back up.</a>
+				</ul>
+			</td>
+		</tr>
+
+		<tr class="content-row">
+			<td class="image">
+				<img src="images/image47.jpg" alt="Profile Picture">
+			</td>
+			<td class="info">
+				<div class="section-header">
+					<h3 id="gaming">Gaming</h3>
+					<img src="images/image28.gif" alt="Gaming GIF" class="section-gif">
+				</div>
+				<ul class="education-list">
+					<li>I play all types of games like role-playing, action, horror, and MMO-RPG.</li>
+					<li>My most favourite and long-term games are anime-style games such as Hoyoverse and KuroGame.</li>
+					<li>Gaming is one way to release all pent-up stress, and some games can help sharpen your mind!</li>
+					<a href="#up">Go back up.</a>
+				</ul>
+			</td>
+		</tr>
+
+		<tr class="content-row">
+			<td class="image">
+				<img src="images/image45.jpg" alt="Profile Picture">
+			</td>
+			<td class="info">
+				<div class="section-header">
+					<h3>Drawing</h3>
+					<img src="images/image29.gif" alt="Drawing GIF" class="section-gif">
+				</div>
+				<ul class="education-list">
+					<li>I learned to draw due to my friends' influence and I’m still going at it until now. Drawing is a hobby that helps me stay super focused!</li>
+					<li>Sometimes I post my drawings on social media to get feedback and improve from people's comments.</li>
+					<li>I was planning to try doing and practising digital art in hope that I would be able to draw more things that I love and doing art commissions. </li>
+					<a href="#up">Go back up.</a>
+				</ul>
+			</td>
+		</tr>
+
+
+				<!-- CONTENT -->
+				<tr class="content-row">
+			<td class="image">
+				<img src="images/image35.jpg" alt="Profile Picture">
+			</td>
+			<td class="info">
+				<div class="merchandise-header">
+					<h3>Collecting Merchandise</h3>
+					<img src="images/image26.gif" alt="Merchandise GIF" class="merchandise-gif">
+				</div>
+				<ul class="education-list">
+					<li>Collecting merchandise of my favourite anime and games is a MUST! I enjoy seeing my collections on the shelf.</li>
+					<li>A few of my merch is from family and close friends.</li>
+					<li>I usually save quite a fortune to buy these merch and I would buy it during any anime events to get cheaper prices.</li>
+					<a href="#up">Go back up.</a>
+				</ul>
+			</td>
+		</tr>
+
+
+        <!-- FOOTER -->
+        <tr class="footer-row">
+            <td colspan="2" class="footer">
+                <div class="know-me-section">
+				  <span class="know-me-text">Know Me More At</span>
+				  <div class="social-buttons">
+					<a href="https://www.facebook.com" class="social-button" target="_blank">
+					  <img src="images/fb.webp" alt="Facebook">
+					</a>
+					<a href="https://www.twitter.com" class="social-button" target="_blank">
+					  <img src="images/x3.png" alt="Twitter">
+					</a>
+					<a href="https://www.instagram.com" class="social-button" target="_blank">
+					  <img src="images/insta3.png" alt="Instagram">
+					</a>
+				 </div>
+			</div>
+            </td>
+        </tr>
+		
+	
+	 <script>
+        // JavaScript for Background Music Control
+        const audio = document.getElementById('background-music'); // Select the audio element
+        const button = document.getElementById('music-control');  // Select the button
+        const icon = button.querySelector('i');  // Select the icon element
+
+        // Play/Pause Logic
+        button.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play(); // Play music
+                icon.classList.remove('fa-volume-off'); // Remove mute icon
+                icon.classList.add('fa-volume-up'); // Add unmute icon
+            } else {
+                audio.pause(); // Pause music
+                icon.classList.remove('fa-volume-up'); // Remove unmute icon
+                icon.classList.add('fa-volume-off'); // Add mute icon
+            }
+        });
+    </script>
+	
+    </table>
+</body>
+</html>
